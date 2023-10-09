@@ -10,6 +10,8 @@ package workshop;
  */
 public class kehadiran {
     public int idkhd;
+    public String tglkhd;
+    public String wktkhd;
 
     public int getIdkhd() {
         return idkhd;
@@ -35,6 +37,4 @@ public class kehadiran {
         this.wktkhd = wktkhd;
     }
 
-    public String tglkhd;
-    public String wktkhd;
 }

@@ -9,8 +9,11 @@ package workshop;
  * @author LENOVO
  */
 public class workshop {
-     public int idws;
+    public int idws;
     public String namaws;
+    public String tanggalws;
+    public String lokasiws;
+    public String deskripsi;
 
     public int getIdws() {
         return idws;
@@ -52,7 +55,5 @@ public class workshop {
         this.deskripsi = deskripsi;
     }
 
-    public String tanggalws;
-    public String lokasiws;
-    public String deskripsi;
+    
 }

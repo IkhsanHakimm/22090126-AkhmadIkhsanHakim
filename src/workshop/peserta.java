@@ -9,6 +9,11 @@ package workshop;
  * @author LENOVO
  */
 public class peserta {
+    public int id;
+    public String nama;
+    public String email;
+    public int nomorhp;
+    public String alamat;
      public int getId() {
         return id;
     }
@@ -49,9 +54,4 @@ public class peserta {
         this.alamat = alamat;
     }
 
-    public int id;
-    public String nama;
-    public String email;
-    public int nomorhp;
-    public String alamat;
 }
