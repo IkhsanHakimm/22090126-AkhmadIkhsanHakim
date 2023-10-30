@@ -1,22 +1,19 @@
-package app;
+package workshop;
 
+import com.mysql.cj.jdbc.MysqlDataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-/**
- *
- * @author User
- */
 public class koneksi {
-    public static Connection sambungkeDB(){
+    public static Connection sambungkeDB() {
         try {
             MysqlDataSource mds = new MysqlDataSource();
-            mds.setUser("root"); 
+            mds.setUser("root");
             mds.setPassword(""); 
-            mds.setDatabaseName("anggota_polisi");
-            mds.setPortNumber(3306); 
-            mds.setServerName("localhost"); 
-            mds.setServerTimezone("Asia/Jakarta"); 
+            mds.setDatabaseName("workshop");
+            mds.setPort(3306); 
+            mds.setServerName("localhost");
+            mds.setServerTimezone("Asia/Jakarta");
             Connection con = mds.getConnection();
             return con;
         } catch (SQLException e) {
@@ -24,19 +21,13 @@ public class koneksi {
         }
         return null;
     }
-    
+
     public static void main(String[] args) {
         Connection c = sambungkeDB();
-        if(c != null){
+        if (c != null) {
             System.out.println("Terhubung");
-        }else {
+        } else {
             System.out.println("Gagal terhubung");
-        }
-    }
-
-    private static class MysqlDataSource {
-
-        public MysqlDataSource() {
         }
     }
 }
