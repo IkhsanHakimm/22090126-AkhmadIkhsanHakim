@@ -8,6 +8,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -209,28 +212,32 @@ public class login1 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        try {
-           st = kon.createStatement();
-            
-           if (txtUsername.getText().equals("") || txtPassword.getPassword().equals("")){
-                JOptionPane.showMessageDialog(null, "maaf username dan password harus di isi");
-                return;
-           }
-           String cekQuery = "SELECT * FROM tabel_peserta WHERE username = '" + txtUsername.getText() + "' AND password = '" + txtPassword.getText() + "'";
-            rs = st.executeQuery(cekQuery);
-            if (rs.next()){
-                if (txtUsername.getText().equals("admin") || txtPassword.getPassword().equals("123")) {
-                    Home mainFrame = new Home(); // Ganti dengan kelas halaman utama Anda
-                    mainFrame.setVisible(true);
+                try {
+            // TODO add your handling code here:
+            st = kon.createStatement();
+            String checkAccount = "SELECT * FROM tabel_peserta WHERE username = '" + txtUsername.getText() + "' AND password = '" + txtPassword.getText() + "'";
+            rs = st.executeQuery(checkAccount);
+
+            if (rs.next()) {
+                String username = rs.getString("username");
+                String password = rs.getString("password");
+                if (username.equalsIgnoreCase("admin") && password.equalsIgnoreCase("admin123")) {
+                    this.setVisible(false);
+                    new Home().setVisible(true);
+                    JOptionPane.showMessageDialog(rootPane, "anda berhasil masuk");
                 } else {
-                    homeuser user = new homeuser();
-                    user.setVisible(true);
+                    this.setVisible(false);
+                    new homeuser().setVisible(true);
+                    JOptionPane.showMessageDialog(rootPane, "anda berhasil masuk");
+
                 }
-                
+
             } else {
-                JOptionPane.showMessageDialog(null, "maaf username atau password yang anda masukan salah");
+                JOptionPane.showMessageDialog(rootPane, "Maaf username/ Password Salah!");
+
             }
-        } catch (Exception e) {
+        } catch (SQLException ex) {
+            Logger.getLogger(login1.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

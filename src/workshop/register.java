@@ -230,10 +230,11 @@ public class register extends javax.swing.JFrame {
             if (rs.next()){
                JOptionPane.showMessageDialog(null, "data sudah ada");   
             } else {
-                String addData = "INSERT INTO tabel_peserta VALUES ('" + txtUsername.getText() + "','" + txtPassword.getText()
+                String addData = "INSERT INTO tabel_peserta(username, password, nama_peserta, email_peserta, nomor_telepon, alamat_peserta) VALUES ('" + txtUsername.getText() + "','" + txtPassword.getText()
                         + "','" + txtFullname.getText() + "','" + txtEmail.getText() + "','" + txtContact.getText() +"','" + txtAddress.getText() + "')";
                 st.executeUpdate(addData);
-                
+                homeuser user = new homeuser();
+                user.setVisible(true);
             }
         } catch (Exception e) {
         }
