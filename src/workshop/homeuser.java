@@ -190,7 +190,7 @@ public class homeuser extends javax.swing.JFrame {
     private void findDaftar() {
         try {
             st = kon.createStatement();
-            String searchQuery = "SELECT * FROM purchase WHERE id_daftar LIKE '%" + txtCari.getText()
+            String searchQuery = "SELECT * FROM daftar WHERE id_daftar LIKE '%" + txtCari.getText()
                     + "%' OR kode LIKE '%" + txtCari.getText()
                     + "%' OR nama LIKE '%" + txtCari.getText()
                     + "%' OR email LIKE '%" + txtCari.getText()
@@ -261,7 +261,7 @@ public class homeuser extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         txtCari = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btncari = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabelhome = new javax.swing.JTable();
         txtID = new javax.swing.JTextField();
@@ -298,10 +298,10 @@ public class homeuser extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Cari");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btncari.setText("Cari");
+        btncari.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btncariActionPerformed(evt);
             }
         });
 
@@ -438,7 +438,7 @@ public class homeuser extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(txtCari, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(37, 37, 37)
-                                .addComponent(jButton1)))
+                                .addComponent(btncari)))
                         .addGap(29, 29, 29))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -498,7 +498,7 @@ public class homeuser extends javax.swing.JFrame {
                 .addGap(46, 46, 46)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtCari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(btncari))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -556,11 +556,13 @@ public class homeuser extends javax.swing.JFrame {
 
     private void txtCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCariActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtCariActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btncariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncariActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        findDaftar();
+    }//GEN-LAST:event_btncariActionPerformed
 
     private void txtIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDActionPerformed
         // TODO add your handling code here:
@@ -659,13 +661,15 @@ public class homeuser extends javax.swing.JFrame {
             ByteArrayOutputStream out = QRCode.from(txtKode.getText())
                     .to(ImageType.PNG).stream();
             String qr_name = txtKode.getText();
-            String path = "src/barcode/";
+            String path = "C:\\Users\\LENOVO\\Downloads\\Documents\\barcode\\";
 
             FileOutputStream fous = new FileOutputStream(new File(path + (qr_name + ".png")));
             fous.write(out.toByteArray());
             fous.flush();
+            JOptionPane.showMessageDialog(null, "berhasil mengunduh qr code");
         } catch (Exception e) {
             System.out.println(e);
+            JOptionPane.showMessageDialog(null, "gagal mengunduh qr code");
         }
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -760,7 +764,7 @@ public class homeuser extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnPilih;
     private javax.swing.JButton btnSimpan;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btncari;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

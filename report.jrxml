@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="da8c21ae-d9dc-4924-9239-35296d11877c">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM daftar]]>
+	</queryString>
+	<field name="id_daftar" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_daftar"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_daftar"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daftar"/>
+	</field>
+	<field name="kode" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="kode"/>
+		<property name="com.jaspersoft.studio.field.label" value="kode"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daftar"/>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nama"/>
+		<property name="com.jaspersoft.studio.field.label" value="nama"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daftar"/>
+	</field>
+	<field name="email" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="email"/>
+		<property name="com.jaspersoft.studio.field.label" value="email"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daftar"/>
+	</field>
+	<field name="jenis_workshop" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="jenis_workshop"/>
+		<property name="com.jaspersoft.studio.field.label" value="jenis_workshop"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daftar"/>
+	</field>
+	<field name="tanggal" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="tanggal"/>
+		<property name="com.jaspersoft.studio.field.label" value="tanggal"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daftar"/>
+	</field>
+	<field name="lokasi" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="lokasi"/>
+		<property name="com.jaspersoft.studio.field.label" value="lokasi"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daftar"/>
+	</field>
+	<field name="jumlah" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="jumlah"/>
+		<property name="com.jaspersoft.studio.field.label" value="jumlah"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daftar"/>
+	</field>
+	<field name="status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="status"/>
+		<property name="com.jaspersoft.studio.field.label" value="status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="daftar"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="54" y="20" width="447" height="30" uuid="c972ec87-c84c-46eb-8bdc-deb1dcf10bfe">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Daftar Hadir Workshop]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="46" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="60" height="30" uuid="a51bfcf9-9c74-47d8-ba89-37611d272632"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="10" width="60" height="30" uuid="3fbf0271-0fb4-4391-baed-7d8e5915a53e"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Kode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="10" width="110" height="30" uuid="c3854370-14be-411c-af58-366ae3ce116b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="10" width="70" height="30" uuid="a278b09f-173a-49a0-9f4f-7af76ba9de09"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Workshop]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="10" width="60" height="30" uuid="40004ef7-b0c7-432c-bec3-1290c2aeb82f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="490" y="7" width="60" height="30" uuid="05b6b402-8d26-4cbb-8aa7-a1f89c2d67be"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Lokasi]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-31" y="37" width="611" height="1" uuid="ff323fa2-c88d-48b4-a385-bc596969d2d2"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="80" height="28" uuid="cec48876-d257-493a-915e-729fe2d32cff"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_daftar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="-2" width="100" height="30" uuid="90d269d2-e3d4-48f8-ad41-5706f5ba97cd"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="-1" width="110" height="30" uuid="12ac284b-5164-4f9f-ba9b-b38dca15c5e8"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="80" height="30" uuid="0f2c7e75-3e76-4cca-8ec6-0e274b0a7bc6"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jenis_workshop}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="100" height="28" uuid="6acb6541-87b1-4c79-9c18-33234ec026ae"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="490" y="-2" width="90" height="30" uuid="32b4ba7d-d229-42fb-99ae-945dac10a3ce"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lokasi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
