@@ -210,8 +210,8 @@ public class register extends javax.swing.JFrame {
 
     private void BtnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCancelActionPerformed
         // TODO add your handling code here:
-        login1 masuk = new login1();
-        masuk.setVisible(true);
+        this.setVisible(false);
+        new login1().setVisible(true);
     }//GEN-LAST:event_BtnCancelActionPerformed
 
     private void BtnRegisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRegisActionPerformed
@@ -233,8 +233,8 @@ public class register extends javax.swing.JFrame {
                 String addData = "INSERT INTO tabel_peserta(username, password, nama_peserta, email_peserta, nomor_telepon, alamat_peserta) VALUES ('" + txtUsername.getText() + "','" + txtPassword.getText()
                         + "','" + txtFullname.getText() + "','" + txtEmail.getText() + "','" + txtContact.getText() +"','" + txtAddress.getText() + "')";
                 st.executeUpdate(addData);
-                homeuser user = new homeuser();
-                user.setVisible(true);
+                this.setVisible(false);
+                new mainuser().setVisible(true);
             }
         } catch (Exception e) {
         }

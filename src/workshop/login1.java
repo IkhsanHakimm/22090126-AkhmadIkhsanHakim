@@ -227,7 +227,7 @@ public class login1 extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(rootPane, "anda berhasil masuk");
                 } else {
                     this.setVisible(false);
-                    new homeuser().setVisible(true);
+                    new mainuser().setVisible(true);
                     JOptionPane.showMessageDialog(rootPane, "anda berhasil masuk");
 
                 }
